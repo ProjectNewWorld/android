@@ -28,6 +28,9 @@
   <project path="bootable/recovery" name="android_bootable_recovery" remote="pnw" />
 
   <!-- External -->
+  <project path="external/ant-wireless/ant_native" name="LineageOS/android_external_ant-wireless_ant_native" remote="github" />
+  <project path="external/ant-wireless/ant_service" name="LineageOS/android_external_ant-wireless_ant_service" remote="github" />
+  <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" remote="github" />
   <project path="external/connectivity" name="LineageOS/android_external_connectivity" remote="github" />
   <remove-project name="platform/external/libnfnetlink" />
   <project path="external/libnfnetlink" name="LineageOS/android_external_libnfnetlink" groups="pdk" remote="github" />
