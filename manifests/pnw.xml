@@ -143,6 +143,8 @@
 
   <!-- PNW Packages -->
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="pnw" />
+  <remove-project name="platform/packages/apps/Launcher3" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="pnw" />
 
   <!-- System -->
   <remove-project name="platform/system/bt" />
