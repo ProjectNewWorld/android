@@ -56,7 +56,7 @@ $ mkdir -p ~/PNW
 $ cd ~/PNW
 
 # Install the PNW Repo in the created directory
-$ repo init -u git://github.com/ProjectNewWorld/android.git -b oreo
+$ repo init -u git://github.com/ProjectNewWorld/android.git -b oreo-mr1
 ```
 
 ### Download the source code ###

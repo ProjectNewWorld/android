@@ -22,6 +22,8 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <remove-project name="platform/development" />
+  <project path="development" name="LineageOS/android_development" groups="developers,pdk-cw-fs,pdk-fs" remote="github" />
 
   <!-- Recovery -->
   <remove-project name="platform/bootable/recovery" />
@@ -32,10 +34,6 @@
   <project path="external/ant-wireless/ant_service" name="LineageOS/android_external_ant-wireless_ant_service" remote="github" />
   <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" remote="github" />
   <project path="external/connectivity" name="LineageOS/android_external_connectivity" remote="github" />
-  <remove-project name="platform/external/libnfnetlink" />
-  <project path="external/libnfnetlink" name="LineageOS/android_external_libnfnetlink" groups="pdk" remote="github" />
-  <remove-project name="platform/external/libnetfilter_conntrack" />
-  <project path="external/libnetfilter_conntrack" name="LineageOS/android_external_libnetfilter_conntrack" groups="pdk" remote="github" />
   <remove-project name="platform/external/selinux" />
   <project path="external/selinux" name="LineageOS/android_external_selinux" groups="pdk" remote="github" />
   <remove-project name="platform/external/tinycompress" />
@@ -46,18 +44,18 @@
   <project path="device/pnw/sepolicy" name="LineageOS/android_device_lineage_sepolicy" remote="github" />
   <project path="system/qcom" name="LineageOS/android_system_qcom" groups="qcom" remote="github" />
   <remove-project name="platform/hardware/qcom/bt"/>
-  <project path="hardware/qcom/bt" name="LineageOS/android_hardware_qcom_bt" remote="github" />
+  <project path="hardware/qcom/bt" name="LineageOS/android_hardware_qcom_bt" groups="qcom,pdk" remote="github" />
   <remove-project name="platform/hardware/libhardware" />
-  <project path="hardware/libhardware" name="LineageOS/android_hardware_libhardware" remote="github" />
+  <project path="hardware/libhardware" name="LineageOS/android_hardware_libhardware" groups="pdk" remote="github" />
   <remove-project name="platform/hardware/libhardware_legacy" />
-  <project path="hardware/libhardware_legacy" name="LineageOS/android_hardware_libhardware_legacy" remote="github" />
-  <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" remote="github" >
+  <project path="hardware/libhardware_legacy" name="LineageOS/android_hardware_libhardware_legacy" groups="pdk" remote="github" />
+  <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" groups="pdk" remote="github" >
     <copyfile dest="hardware/lineage/Android.bp" src="Android.bp"/>
   </project>
   <remove-project name="platform/hardware/broadcom/libbt" />
-  <project path="hardware/broadcom/libbt" name="LineageOS/android_hardware_broadcom_libbt" remote="github" />
+  <project path="hardware/broadcom/libbt" name="LineageOS/android_hardware_broadcom_libbt" groups="pdk" remote="github" />
   <remove-project name="platform/hardware/broadcom/wlan" />
-  <project path="hardware/broadcom/wlan" name="LineageOS/android_hardware_broadcom_wlan" remote="github" />
+  <project path="hardware/broadcom/wlan" name="LineageOS/android_hardware_broadcom_wlan" groups="pdk,broadcom_wlan" remote="github" />
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" />
   <remove-project name="platform/hardware/interfaces" />
   <project path="hardware/interfaces" name="LineageOS/android_hardware_interfaces" remote="github" />
@@ -67,35 +65,35 @@
   <project path="hardware/qcom/audio-caf/msm8916" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8916" />
   <!--<project path="hardware/qcom/audio-caf/msm8937" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8937" />-->
   <project path="hardware/qcom/audio-caf/msm8952" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8952" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8960" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8974" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="staging/lineage-15.1-caf-8960" />
+  <project path="hardware/qcom/audio-caf/msm8974" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="staging/lineage-15.1-caf-8974" />
   <project path="hardware/qcom/audio-caf/msm8994" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8994" />
-  <project path="hardware/qcom/audio-caf/msm8996" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8996" />
+  <project path="hardware/qcom/audio-caf/msm8996" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="staging/lineage-15.1-caf-8996" />
   <project path="hardware/qcom/audio-caf/msm8998" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8998" />
   <project path="hardware/qcom/bt-caf" name="LineageOS/android_hardware_qcom_bt" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf" />
   <project path="hardware/qcom/display-caf/apq8084" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display"  remote="github" revision="lineage-15.0-caf-8084" />
   <project path="hardware/qcom/display-caf/msm8916" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display"  remote="github" revision="lineage-15.0-caf-8916" />
   <!--<project path="hardware/qcom/display-caf/msm8937" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8937" />-->
   <project path="hardware/qcom/display-caf/msm8952" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8952" />
-  <project path="hardware/qcom/display-caf/msm8960" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8960" />
-  <project path="hardware/qcom/display-caf/msm8974" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8974" />
+  <project path="hardware/qcom/display-caf/msm8960" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="staging/lineage-15.1-caf-8960" />
+  <project path="hardware/qcom/display-caf/msm8974" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="staging/lineage-15.1-caf-8974" />
   <project path="hardware/qcom/display-caf/msm8994" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8994" />
-  <project path="hardware/qcom/display-caf/msm8996" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8996" />
+  <project path="hardware/qcom/display-caf/msm8996" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="staging/lineage-15.1-caf-8996" />
   <project path="hardware/qcom/display-caf/msm8998" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.0-caf-8998" />
   <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" remote="github" />
   <project path="hardware/qcom/media-caf/apq8084" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8084" />
   <project path="hardware/qcom/media-caf/msm8916" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8916" />
   <!--<project path="hardware/qcom/media-caf/msm8937" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8937" />-->
   <project path="hardware/qcom/media-caf/msm8952" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8952" />
-  <project path="hardware/qcom/media-caf/msm8960" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8960" />
-  <project path="hardware/qcom/media-caf/msm8974" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8974" />
+  <project path="hardware/qcom/media-caf/msm8960" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="staging/lineage-15.1-caf-8960" />
+  <project path="hardware/qcom/media-caf/msm8974" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="staging/lineage-15.1-caf-8974" />
   <project path="hardware/qcom/media-caf/msm8994" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8994" />
   <project path="hardware/qcom/media-caf/msm8996" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8996" />
   <project path="hardware/qcom/media-caf/msm8998" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" remote="github" revision="lineage-15.0-caf-8998" />
   <remove-project name="platform/hardware/qcom/keymaster"/>
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="qcom,qcom_keymaster,pdk" remote="pnw" />
   <project path="hardware/qcom/wlan-caf" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" remote="github" revision="lineage-15.0-caf" />
-  <project path="hardware/ril-caf" name="LineageOS/android_hardware_ril" groups="pdk" remote="github" revision="lineage-15.0-caf" />
+  <project path="hardware/ril-caf" name="LineageOS/android_hardware_ril" groups="pdk" remote="github" revision="staging/lineage-15.1-caf" />
 
   <!-- AOSP HALs -->
   <remove-project name="platform/hardware/ril" />
@@ -113,27 +111,27 @@
 
   <!-- Native -->
   <remove-project name="platform/bionic" />
-  <project path="bionic" name="android_bionic" remote="pnw" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="pnw" />
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/av" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="pnw" />
+  <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="pnw" />
   <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="pnw" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="pnw" />
   <remove-project name="platform/frameworks/native" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="pnw" />
+  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="pnw" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <project path="frameworks/opt/telephony" name="LineageOS/android_frameworks_opt_telephony" groups="pdk" remote="github" />
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/CarrierConfig" />
-  <project path="packages/apps/CarrierConfig" name="LineageOS/android_packages_apps_CarrierConfig" remote="github" />
+  <project path="packages/apps/CarrierConfig" name="LineageOS/android_packages_apps_CarrierConfig" groups="pdk-cw-fs,pdk-fs" remote="github" />
   <remove-project name="platform/packages/apps/DeskClock" />
-  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="pnw" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" groups="pdk-fs" remote="pnw" />
   <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pnw" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="pnw" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
-  <project path="packages/inputmethods/LatinIME" name="LineageOS/android_packages_inputmethods_LatinIME" remote="github" />
+  <project path="packages/inputmethods/LatinIME" name="LineageOS/android_packages_inputmethods_LatinIME" groups="pdk-fs" remote="github" />
   <remove-project name="platform/packages/services/Telecomm" />
   <project path="packages/services/Telecomm" name="LineageOS/android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="github" />
   <remove-project name="platform/packages/services/Telephony" />
@@ -144,15 +142,15 @@
   <!-- PNW Packages -->
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="pnw" />
   <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="pnw" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs" remote="pnw" />
   <remove-project name="platform/packages/apps/Dialer" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="pnw" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" groups="pdk-fs" remote="pnw" />
 
   <!-- System -->
   <remove-project name="platform/system/bt" />
   <project path="system/bt" name="LineageOS/android_system_bt" groups="pdk" remote="github" />
   <remove-project name="platform/system/core" />
-  <project path="system/core" name="android_system_core" remote="pnw" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="pnw" />
   <remove-project name="platform/system/libhidl" />
   <project path="system/libhidl" name="LineageOS/android_system_libhidl" groups="pdk" remote="github" />
   <remove-project name="platform/system/media" />
@@ -160,22 +158,18 @@
   <remove-project name="platform/system/nfc" />
   <project path="system/nfc" name="LineageOS/android_system_nfc" groups="pdk" remote="github" />
   <remove-project name="platform/system/sepolicy" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="pnw" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="pnw" />
   <remove-project name="platform/system/tools/hidl" />
-  <project path="system/tools/hidl" name="LineageOS/android_system_tools_hidl" remote="github" />
-  <remove-project name="platform/system/hardware/interfaces" />
-  <project path="system/hardware/interfaces" name="LineageOS/android_system_hardware_interfaces" groups="pdk" remote="github" />
-  <remove-project name="platform/system/netd" />
-  <project path="system/netd" name="LineageOS/android_system_netd" remote="github" />
+  <project path="system/tools/hidl" name="LineageOS/android_system_tools_hidl" groups="pdk" remote="github" />
   <remove-project name="platform/system/vold" />
-  <project path="system/vold" name="android_system_vold" remote="pnw" />
+  <project path="system/vold" name="android_system_vold" groups="pdk" remote="pnw" />
 
   <!-- Vendor -->
   <project path="vendor/pnw" name="android_vendor_pnw" remote="pnw" />
-  <project path="vendor/codeaurora/telephony" name="LineageOS/android_vendor_codeaurora_telephony" remote="github"/>
+  <project path="vendor/codeaurora/telephony" name="LineageOS/android_vendor_codeaurora_telephony" remote="github" revision="lineage-15.0" />
   <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="pnw" />
-  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" remote="github"/>
-  <project path="vendor/qcom/opensource/dpm" name="LineageOS/android_vendor_qcom_opensource_dpm" remote="github"/>
+  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" remote="github" revision="lineage-15.0" />
+  <project path="vendor/qcom/opensource/dpm" name="LineageOS/android_vendor_qcom_opensource_dpm" remote="github"  revision="lineage-15.0" />
   <project path="vendor/qcom/opensource/interfaces" name="LineageOS/android_vendor_qcom_opensource_interfaces" remote="github" >
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
