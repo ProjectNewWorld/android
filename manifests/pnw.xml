@@ -37,7 +37,7 @@
   <remove-project name="platform/external/selinux" />
   <project path="external/selinux" name="LineageOS/android_external_selinux" groups="pdk" remote="github" />
   <remove-project name="platform/external/tinycompress" />
-  <project path="external/tinycompress" name="LineageOS/android_external_tinycompress/" groups="pdk" remote="github" />
+  <project path="external/tinycompress" name="android_external_tinycompress/" groups="pdk" remote="pnw" />
 
   <!-- Hardware -->
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" />
