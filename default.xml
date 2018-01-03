@@ -14,7 +14,7 @@
            fetch="https://github.com/ProjectNewWorld"
            revision="oreo-mr1"/>
 
-  <default revision="refs/tags/android-8.1.0_r1"
+  <default revision="refs/tags/android-8.1.0_r4"
            remote="aosp"
            sync-j="4"
            sync-c="true"/>
