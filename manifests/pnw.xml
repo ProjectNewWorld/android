@@ -147,6 +147,9 @@
   <remove-project name="platform/packages/apps/Dialer" />
   <project path="packages/apps/Dialer" name="LineageOS/android_packages_apps_Dialer" groups="pdk-fs" remote="github" />
 
+  <!-- PNW Settings -->
+  <project path="packages/apps/PnwSettings" name="android_packages_apps_PnwSettings" remote="pnw" />
+
   <!-- System -->
   <remove-project name="platform/system/bt" />
   <project path="system/bt" name="LineageOS/android_system_bt" groups="pdk" remote="github" />
