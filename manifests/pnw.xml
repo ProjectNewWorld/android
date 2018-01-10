@@ -59,6 +59,7 @@
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" />
   <remove-project name="platform/hardware/interfaces" />
   <project path="hardware/interfaces" name="LineageOS/android_hardware_interfaces" remote="github" />
+  <project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="qcom,pdk" revision="staging/lineage-15.1" />
 
   <!-- CodeAurora HALs -->
   <project path="hardware/qcom/audio-caf/apq8084" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.0-caf-8084" />
