@@ -38,6 +38,8 @@
   <project path="external/selinux" name="LineageOS/android_external_selinux" groups="pdk" remote="github" />
   <remove-project name="platform/external/tinycompress" />
   <project path="external/tinycompress" name="android_external_tinycompress/" groups="pdk" remote="pnw" />
+  <remove-project name="platform/external/libtextclassifier" />
+  <project path="external/libtextclassifier" name="LineageOS/android_external_libtextclassifier" groups="pdk" remote="github" />
 
   <!-- Hardware -->
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" />
