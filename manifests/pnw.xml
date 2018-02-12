@@ -160,8 +160,6 @@
   <project path="system/core" name="android_system_core" groups="pdk" remote="pnw" />
   <remove-project name="platform/system/libhidl" />
   <project path="system/libhidl" name="LineageOS/android_system_libhidl" groups="pdk" remote="github" />
-  <remove-project name="platform/system/media" />
-  <project path="system/media" name="LineageOS/android_system_media" remote="github" />
   <remove-project name="platform/system/nfc" />
   <project path="system/nfc" name="LineageOS/android_system_nfc" groups="pdk" remote="github" />
   <remove-project name="platform/system/sepolicy" />
