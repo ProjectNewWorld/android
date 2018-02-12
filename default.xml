@@ -3,7 +3,7 @@
 
   <remote  name="github"
            fetch=".."
-           revision="refs/heads/staging/lineage-15.1"
+           revision="refs/heads/lineage-15.1"
            review="review.lineageos.org" />
 
   <remote  name="aosp"
